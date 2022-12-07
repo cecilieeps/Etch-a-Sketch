@@ -1,18 +1,18 @@
-// Create a function which creates a grid.
-// The function should contain a loop which creates a div for
-// every iteration which is a tile. Each of those div's should be
-// given a unique id.
-// With nested loops we can assign a column and row value. 
+createGrid(16);
 
-const grid = document.getElementById('grid');
-function createGrid(sideLength) {
-    for (let r = 0; r < sideLength; r++){ // row-wise
-        for (let c = 0; c < sideLength; c++) { // column-wise
+// The CSS rules for a tile will change depending on the dimensions 
+// given. i.e. the width/height of a tile will change.
+function createGrid(units) {
+    const grid = document.getElementById('grid');
+    let styles = document.getElementById('styles');
+    let l = 320/units;
+    for (let r = 0; r < units; r++){ // row-wise
+        for (let c = 0; c < units; c++) { // column-wise
             const tile = document.createElement('div');
             tile.setAttribute('id', `(${r},${c})`);
             grid.appendChild(tile);
+            tile.style.width = `${l}px`;
+            tile.style.height = `${l}px`;
         }
     }
 }
-
-createGrid(10);

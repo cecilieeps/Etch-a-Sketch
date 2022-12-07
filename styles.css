@@ -1,12 +1,11 @@
 #grid {
     display: flex;
     border: 2px solid rgb(107, 143, 107);
-    max-width: 200px;
+    max-width: 400px;
     flex-wrap: wrap;
 }
 
 #grid > * {
-    width: 20px;
-    height: 20px;
     background-color: lavender;
+    border: 1px solid grey;
 }
