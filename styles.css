@@ -1,11 +1,30 @@
-#grid {
-    display: flex;
-    border: 2px solid rgb(107, 143, 107);
-    max-width: 400px;
-    flex-wrap: wrap;
+body {
+    background-color: rgb(201, 175, 173);
+    background-image: url('');
+    background-position: left bottom;
+    background-repeat: no-repeat;
 }
 
+h1 {
+    color: whitesmoke;
+    text-align: center;
+}
+
+#grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    height: auto;
+    margin: 100px auto;
+}
+
+/* Applied to everything inside the grid i.e. the tiles
+*/
 #grid > * {
-    background-color: lavender;
-    border: 1px solid grey;
+    background-color: whitesmoke;
+}
+
+img {
+    width: 100px;
+    height: auto;
 }
