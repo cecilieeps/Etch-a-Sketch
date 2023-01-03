@@ -1,6 +1,8 @@
-createGrid(20);
+createGrid(50);
+
 let tiles = document.getElementById('grid').childNodes;
 let clickCounter = 0;
+
 for (let tile of tiles) {
     tile.addEventListener('click', () => { 
         clickCounter++;
@@ -46,3 +48,17 @@ function createGrid(units) {
 function selectColor() {
     
 }
+
+// Add event listener to mode buttons. Have the light version by default. And hide the LIGHT button
+const voidBtn = document.querySelector('.dark-mode-btn');
+const lightBtn = document.querySelector('.light-mode-btn');
+
+voidBtn.addEventListener('click', () => {
+    document.querySelector('body').style.background = 'black';
+    document.querySelector('h1').style.color = 'whitesmoke';
+});
+
+lightBtn.addEventListener('click', () => {
+    document.querySelector('body').style.background = 'whitesmoke';
+    document.querySelector('h1').style.color = 'black';
+});
