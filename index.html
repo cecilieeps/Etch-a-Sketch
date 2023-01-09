@@ -3,26 +3,35 @@
     <head>
         <meta charset="utf-8">
         <title>Etch-a-Sketch</title>
+        <link rel="icon" type="image/png" href="./images/spirit.png"/>
         <script id="styles" src="etch-a-sketch.js" defer></script>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body class="body">
-        <h1>Etch-a-Sketch</h1>
-        <div class="mode">
-            <button class="dark-mode-btn">ENTER THE VOID</button>
-            <button class="light-mode-btn">GIVE ME LIGHT</button>
+        <div class="containers">
+            <div class="title-container">
+                <h1>Etch-a-Sketch</h1>
+            </div>
+            <div class="content">
+                <div class="mode">
+                    <button class="howls-btn">Howl's Moving Castle</button>
+                    <button class="totoro-btn">My Neighbor Totoro</button>
+                    <button class="kiki-btn">Kiki's Delivery Service</button>
+                </div>
+                <div id="grid"></div>
+                <div class="dimensions-buttons">
+                    <button id="16x16">16x16</button>
+                    <button id="25x25">25x25</button>
+                    <button id="50x50">50x50</button>
+                    <button id="80x80">80x80</button>
+                </div>
+            </div>
+            <div class="palette-type">
+                <button class="rainbow-palette">Rainbow</button>
+                <button class="default-palette">Default</button>
+            </div>
+            <img id="divider" src = "./images/vector.png">
+            <button class="clear-grid-btn">Clear Canvas</button>
         </div>
-        <div id="grid-dimensions">
-            <button class="dimension-btn">16x16</button>
-            <button class="dimension-btn">25x25</button>
-            <button class="dimension-btn">50x50</button>
-            <button class="dimension-btn">80x80</button>
-        </div>
-        <div id="grid"></div>
-        <div class="palette-type">
-            <button class="rainbow-palette">Rainbow</button>
-            <button class="default-palette">Default</button>
-        </div>
-        <button id="clear-grid-btn">Clear Canvas</button>
     </body>
 </html>
